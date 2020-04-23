@@ -77,7 +77,7 @@ export class ReferenceDataController {
     return await this.referenceDataService.getUSExchanges();
   }
 
-  @Get('/us-exchange')
+  @Get('/us-holidays-and-trading-date')
   async getUsHolidaysAndTradingDates(
     @Query('type') type: TradingDatesType,
     @Query('direction') direction?: TradingDatesDirection,
