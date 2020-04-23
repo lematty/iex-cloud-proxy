@@ -23,10 +23,47 @@ import { StockResearchService } from './stock-research/stock-research.service';
 import { StockResearchController } from './stock-research/stock-research.controller';
 import { SystemMetadataController } from './system-metadata/system-metadata.controller';
 import { SystemMetadataService } from './system-metadata/system-metadata.service';
+import { APP_INTERCEPTOR, APP_FILTER } from '@nestjs/core';
+import { LoggingInterceptor } from './interceptors/logging.interceptor';
+import { HttpExceptionFilter } from './interceptors/http-exception.filter';
 
 @Module({
   imports: [],
-  controllers: [AppController, AccountController, CorporateActionsController, GuidesController, MarketInfoController, NewsController, ReferenceDataController, StockFundamentalsController, StockPricesController, StockProfilesController, StockResearchController, SystemMetadataController],
-  providers: [AppService, AccountService, CorporateActionsService, GuidesService, MarketInfoService, NewsService, ReferenceDataService, StockFundamentalsService, StockPricesService, StockProfilesService, StockResearchService, SystemMetadataService],
+  controllers: [
+    AppController,
+    AccountController,
+    CorporateActionsController,
+    GuidesController,
+    MarketInfoController,
+    NewsController,
+    ReferenceDataController,
+    StockFundamentalsController,
+    StockPricesController,
+    StockProfilesController,
+    StockResearchController,
+    SystemMetadataController
+  ],
+  providers: [
+    AppService,
+    AccountService,
+    CorporateActionsService,
+    GuidesService,
+    {
+      provide: APP_FILTER,
+      useClass: HttpExceptionFilter,
+    },
+    {
+      provide: APP_INTERCEPTOR,
+      useClass: LoggingInterceptor,
+    },
+    MarketInfoService,
+    NewsService,
+    ReferenceDataService,
+    StockFundamentalsService,
+    StockPricesService,
+    StockProfilesService,
+    StockResearchService,
+    SystemMetadataService
+  ],
 })
 export class AppModule {}
