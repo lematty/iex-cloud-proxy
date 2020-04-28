@@ -1,7 +1,9 @@
 import { Controller, Get, Query } from '@nestjs/common';
 import { StockFundamentalsService } from './stock-fundamentals.service';
 import { BalanceSheetParams, BalanceSheetResponse, CashFlowParams, CashFlowResponse, DividendsRange, DividendsBasic, EarningsParams, EarningsResponse, FinancialsParams, FinancialsResponse, IncomeStatementResponse, IncomeStatementParams, SplitsBasic } from 'iex-cloud';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('stock-fundamentals')
 @Controller('stock-fundamentals')
 export class StockFundamentalsController {
 

@@ -1,7 +1,9 @@
 import { Controller, Get, Query } from '@nestjs/common';
 import { MarketInfoService } from './market-info.service';
 import { CollectionType, Quote, EarningsTodayData, IPOCalendar } from 'iex-cloud';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('market-info')
 @Controller('market-info')
 export class MarketInfoController {
 

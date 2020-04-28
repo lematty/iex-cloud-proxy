@@ -1,7 +1,9 @@
 import { Controller, Get, Query } from '@nestjs/common';
 import { StockResearchService } from './stock-research.service';
 import { AdvancedStats, AnalystRecommendation, EstimatesParams, EstimatesData, FundOwnership, InstitutionalOwnership, KeyStat, PriceTarget } from 'iex-cloud';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('stock-research')
 @Controller('stock-research')
 export class StockResearchController {
 

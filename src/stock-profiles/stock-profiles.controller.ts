@@ -1,7 +1,9 @@
 import { Controller, Get, Query } from '@nestjs/common';
 import { StockProfilesService } from './stock-profiles.service';
 import { Company, InsiderRoster, InsiderSummary, InsiderTransactions, Logo } from 'iex-cloud';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('stock-profiles')
 @Controller('stock-profiles')
 export class StockProfilesController {
 

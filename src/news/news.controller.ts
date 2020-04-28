@@ -1,7 +1,9 @@
 import { Controller, Get, Query } from '@nestjs/common';
 import { NewsService } from './news.service';
 import { News } from 'iex-cloud';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('news')
 @Controller('news')
 export class NewsController {
 

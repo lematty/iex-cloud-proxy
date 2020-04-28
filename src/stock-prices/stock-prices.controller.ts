@@ -1,7 +1,9 @@
 import { Controller, Get, Query } from '@nestjs/common';
 import { StockPricesService } from './stock-prices.service';
 import { Book, DelayedQuote, HistoricalPriceParams, HistoricalPrice, IntradayPriceParams, IntradayPrice, LargestTrade, OHLC, Quote, VolumeByVenue } from 'iex-cloud';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('stock-prices')
 @Controller('stock-prices')
 export class StockPricesController {
 

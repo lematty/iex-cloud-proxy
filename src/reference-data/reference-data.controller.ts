@@ -1,7 +1,9 @@
 import { Controller, Get, Query } from '@nestjs/common';
 import { ReferenceDataService, Input, Sector, Tag } from './reference-data.service';
 import { CryptocurrencySymbol, FXSymbols, IEXSymbol, InternationalExchange, InternationalSymbol, ISINMapping, MutualFundSymbol, OptionsSymbol, OTCSymbol, Search, TradeSymbol, USExchange, USHolidaysAndTradingDate, TradingDatesType, TradingDatesDirection } from 'iex-cloud';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('reference-data')
 @Controller('reference-data')
 export class ReferenceDataController {
   

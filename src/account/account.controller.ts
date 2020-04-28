@@ -1,7 +1,9 @@
 import { Controller, Get, Query } from '@nestjs/common';
 import { AccountService } from './account.service';
 import { Metadata } from 'iex-cloud';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('account')
 @Controller('account')
 export class AccountController {
 

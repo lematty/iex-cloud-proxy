@@ -1,7 +1,9 @@
 import { Controller, Get, Query } from '@nestjs/common';
 import { CorporateActionsService } from './corporate-actions.service';
 import { BonusIssue, Distribution, Dividend, ReturnOfCapital, RightsIssue, RightsToPurchase, SecurityReclassification, SecuritySwap, Spinoff, Split } from 'iex-cloud';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('corporate-actions')
 @Controller('corporate-actions')
 export class CorporateActionsController {
 

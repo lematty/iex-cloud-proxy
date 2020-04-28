@@ -1,7 +1,9 @@
 import { Controller, Get, Query, Param } from '@nestjs/common';
 import { GuidesService } from './guides.service';
 import { DataPoint, TimeSeries, TimeSeriesById } from 'iex-cloud';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('guides')
 @Controller('guides')
 export class GuidesController {
   constructor(private guidesService: GuidesService) {}
