@@ -1,6 +1,4 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { AccountController } from './account/account.controller';
 import { AccountService } from './account/account.service';
 import { CorporateActionsService } from './corporate-actions/corporate-actions.service';
@@ -30,7 +28,6 @@ import { HttpExceptionFilter } from './interceptors/http-exception.filter';
 @Module({
   imports: [],
   controllers: [
-    AppController,
     AccountController,
     CorporateActionsController,
     GuidesController,
@@ -44,7 +41,6 @@ import { HttpExceptionFilter } from './interceptors/http-exception.filter';
     SystemMetadataController
   ],
   providers: [
-    AppService,
     AccountService,
     CorporateActionsService,
     GuidesService,
