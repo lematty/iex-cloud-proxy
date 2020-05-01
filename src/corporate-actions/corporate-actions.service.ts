@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { BonusIssue, bonusIssue, Distribution, distribution, dividends, Dividend, ReturnOfCapital, returnOfCapital, RightsIssue, rightsIssue, RightsToPurchase, rightsToPurchase, SecurityReclassification, securityReclassification, SecuritySwap, securitySwap, Spinoff, spinoff, splits, Split } from 'iex-cloud';
+import { bonusIssue, distribution, dividends, Dividend, ReturnOfCapital, returnOfCapital, RightsIssue, rightsIssue, RightsToPurchase, rightsToPurchase, SecurityReclassification, securityReclassification, SecuritySwap, securitySwap, Spinoff, spinoff, splits, Split } from 'iex-cloud';
+import { BonusIssue, Distribution } from './coporate-actions.models';
 
 @Injectable()
 export class CorporateActionsService {

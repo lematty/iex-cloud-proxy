@@ -1,0 +1,68 @@
+import { BonusIssue, Distribution } from './coporate-actions.models';
+
+export const bonusIssueMock: readonly BonusIssue[] = [
+  {
+    symbol: 'BVHMF',
+    exDate: '2020-01-03',
+    recordDate: '2020-01-02',
+    paymentDate: '2020-01-03',
+    fromFactor: 1,
+    toFactor: 0.03819,
+    ratio: 26.184865147944485,
+    description: 'Ordinary Shares',
+    flag: 'Stock',
+    securityType: 'Equity Shares',
+    resultSecurityType: 'Equity Shares',
+    notes: '(As on 10/09/2019) CAB<BR><BR>SITUATION:      BONUS ISSUE <BR>',
+    figi: 'BBG000FZ8989',
+    lastUpdated: '2019-11-08',
+    currency: '',
+    countryCode: 'US',
+    parValue: 0.5,
+    parValueCurrency: 'GBP',
+    lapsedPremium: 0,
+    refid: '5951486',
+    created: '2019-09-11',
+    id: 'ADVANCED_BONUS',
+    source: 'IEX Cloud',
+    key: 'BVHMF',
+    subkey: '5951486',
+    date: 1578009600000,
+    updated: 1574690010000
+  },
+];
+
+export const distributionMock: readonly Distribution[] = [
+  {
+    symbol: 'KERRF',
+    exDate: '2019-11-26',
+    recordDate: '2019-11-19',
+    paymentDate: '2019-11-29',
+    withdrawalFromDate: null,
+    withdrawalToDate: null,
+    electionDate: null,
+    fromFactor: 3.451963,
+    toFactor: 1,
+    ratio: 3.451963,
+    minPrice: 0,
+    maxPrice: 0,
+    description: 'Ordinary Shares',
+    flag: 'Stock',
+    securityType: 'Equity Shares',
+    hasWithdrawalRights: 1,
+    notes: '(As on 09/10/2019) CAB<BR>SITUATION:      CAPITAL REDUCTION AND DEMERGER <BR>',
+    figi: 'BBG00N70C5N1',
+    lastUpdated: '2019-11-21',
+    countryCode: 'US',
+    parValue: 0.0001,
+    parValueCurrency: 'GBP',
+    refid: '6008685',
+    created: '2019-10-09',
+    id: 'ADVANCED_DISTRIBUTION',
+    source: 'IEX Cloud',
+    key: 'KERRF',
+    subkey: '6008685',
+    date: 1574726400000,
+    updated: 1574691580000
+  }
+];
